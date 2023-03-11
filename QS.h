@@ -14,8 +14,7 @@ public:
     virtual ~QS() = default;
 
     void quickSort(std::vector<int> &array, size_t left, size_t right) {
-        if (right <= left) {
-
+        if (left >= right) {
             return;
         }
         size_t pivot = medianOfThree(array, left, right);
@@ -25,7 +24,7 @@ public:
     }
 
     void sort(std::vector<int> &array) override {
-        quickSort(array, array[0], array[array.size()-1]);
+        quickSort(array, 0, array.size()-1);
     }
 
     size_t medianOfThree(std::vector<int> &array, size_t left, size_t right) override {
