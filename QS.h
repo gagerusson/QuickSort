@@ -15,6 +15,7 @@ public:
 
     void quickSort(std::vector<int> &array, size_t left, size_t right) {
         if (right <= left) {
+
             return;
         }
         size_t pivot = medianOfThree(array, left, right);
